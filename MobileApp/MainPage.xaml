@@ -1,0 +1,50 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MobileApp"
+             x:Class="MobileApp.MainPage"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Продвижение" TextColor="Black" HorizontalOptions="Center" FontSize="35" FontAttributes="Bold" Margin="0,0,0,75"/>
+            <ImageButton Source="didntleague" Aspect="AspectFill"  BackgroundColor="White"
+                         CornerRadius="20" WidthRequest="150" HeightRequest="125"                        
+                         Margin="10,0,280,10"
+                         Clicked="League_Clicked"/>
+            <ImageButton Source="goldencup" Aspect="AspectFill"  BackgroundColor="White"
+                         CornerRadius="20" WidthRequest="200" HeightRequest="200"                        
+                         Margin="125,-215,125,10"
+                         Clicked="Cup_Clicked"/>
+            <ImageButton Source="series.png" Aspect="AspectFill"  BackgroundColor="White"
+                         CornerRadius="20" WidthRequest="150" HeightRequest="125"                        
+                         Margin="280,-140,10,10" Padding="20,20"
+                         />
+            <Label Text="Лига" Margin="45,20,0,0" />
+            <Label Text="Достижения" Margin="155,-25,0,0"/>
+            <Label Text="0 дней" Margin="305,-40,0,0"/>
+            <Label Text="Серия" Margin="305,-10,0,0"/>
+            <Label Text="Серия" TextColor="Black" FontSize="20" Margin="0,25,0,0" HorizontalOptions="Center"  FontAttributes="Bold"/>
+            <Image x:Name="visit1" HeightRequest="40" WidthRequest="40" Margin="0,10,300,0"  Source="didntvisit.png"/>
+            <Image x:Name="visit2" HeightRequest="40" WidthRequest="40" Margin="0,-45,200,0"  Source="didntvisit.png"/>
+            <Image x:Name="visit3" HeightRequest="40" WidthRequest="40" Margin="0,-45,100,0"  Source="didntvisit.png"/>
+            <Image x:Name="visit4" HeightRequest="40" WidthRequest="40" Margin="0,-45,0,0"  Source="didntvisit.png"/>
+            <Image x:Name="visit5" HeightRequest="40" WidthRequest="40" Margin="0,-45,-100,0"  Source="didntvisit.png"/>
+            <Image x:Name="visit6" HeightRequest="40" WidthRequest="40" Margin="0,-45,-200,0"  Source="didntvisit.png"/>
+            <Image x:Name="visit7" HeightRequest="40" WidthRequest="40" Margin="0,-45,-300,0"  Source="didntvisit.png"/>
+            <Button Text="Текущая программа тренировок" HeightRequest="50" BackgroundColor="White" CornerRadius="10"
+                    TextColor="Black" Font="17" FontAttributes="Bold" 
+                    Margin="10,20,10,-10"
+                    Clicked="Program_Now"/>
+            <ProgressBar x:Name="progressbar" Margin="20,30,20,10" ScaleY="10" ProgressColor="Orange" Progress="0.5" />
+            <Button Text="Достижения" HeightRequest="50" TextColor="Black"
+                    Font="17" FontAttributes="Bold" 
+                    Margin="10,20,10,10" BackgroundColor="White" CornerRadius="10"
+                    Clicked="All_Achivement"/>
+            <Image x:Name="didntlunges" WidthRequest="100" Margin="-275,0,0,0" Source="didntlunges.png"/>
+            <Image x:Name="didntpullups" WidthRequest="100" Margin="-90,-90,0,0" Source="didntpullups.png"/>
+            <Image x:Name="didntpushups" WidthRequest="100" Margin="100,-90,0,0" Source="didntpushups.png"/>
+            <Image x:Name="didntsquat" WidthRequest="100" Margin="290,-90,0,0" Source="didntsquat.png"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

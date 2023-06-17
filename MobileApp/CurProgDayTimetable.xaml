@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="MobileApp.CurProgDayTimetable">
+    <StackLayout Orientation="Vertical">
+        <ScrollView>
+            <StackLayout BackgroundColor="#F5F5F5">
+                <Label Text="План тренировки" TextColor="Black" FontSize="30" FontAttributes="Bold"
+                   HorizontalOptions="Center" Margin="0,20,0,0"/>
+                <Frame BackgroundColor="#ffff" CornerRadius="20" Margin="5,0">
+                    <StackLayout>
+                        <Label Text="Разминка" FontAttributes="Italic" FontSize="20"/>
+                        <CollectionView x:Name="RazminkaCollection" HeightRequest="150">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Orientation="Vertical">
+                                        <Frame CornerRadius="30" BorderColor="Black" HasShadow="True" Margin="0, 0, 0, 10">
+                                            <StackLayout Orientation="Vertical">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="2*" />
+
+                                                    </Grid.ColumnDefinitions>
+                                                    <ffimageloading:SvgCachedImage Grid.Column="0" Source="{Binding GIF}" HeightRequest="40"/>
+                                                    <Label Grid.Column="1" Text="{Binding Name}" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+
+                                                </Grid>
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <Label Text="Основная часть" FontAttributes="Italic" FontSize="20"/>
+                        <CollectionView x:Name="OsnovaCollection" HeightRequest="150">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Orientation="Vertical">
+                                        <Frame CornerRadius="30" BorderColor="Black" HasShadow="True" Margin="0, 0, 0, 10">
+                                            <StackLayout Orientation="Vertical">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="2*" />
+
+                                                    </Grid.ColumnDefinitions>
+                                                    <ffimageloading:SvgCachedImage Grid.Column="0" Source="{Binding GIF}" HeightRequest="40"/>
+                                                    <Label Grid.Column="1" Text="{Binding Name}" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+
+                                                </Grid>
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <Label Text="Заминка" FontAttributes="Italic" FontSize="20"/>
+                        <CollectionView x:Name="ZaminkaCollection" HeightRequest="150" >
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Orientation="Vertical">
+                                        <Frame CornerRadius="30" BorderColor="Black" HasShadow="True" Margin="0, 0, 0, 10">
+                                            <StackLayout Orientation="Vertical">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="2*" />
+
+                                                    </Grid.ColumnDefinitions>
+                                                    <ffimageloading:SvgCachedImage Grid.Column="0" Source="{Binding GIF}" HeightRequest="40"/>
+                                                    <Label Grid.Column="1" Text="{Binding Name}" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+
+                                                </Grid>
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </StackLayout>
+                </Frame>
+
+
+            </StackLayout>
+        </ScrollView>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="trainertime" HeightRequest="25" HorizontalOptions="Start" Margin="10,20"/>
+            <Label Text="Общее время: " FontSize="13" TextColor="Black" Margin="0,20"/>
+            <Label x:Name="trainTimeInMin" FontSize="13" TextColor="Black" Margin="0,20"/>
+            <Label Text=" мин." FontSize="13" TextColor="Black" Margin="0,20"/>
+            <Label x:Name="trainTimeInSec" FontSize="13" TextColor="Black" Margin="0,20"/>
+            <Label Text=" сек." FontSize="13" TextColor="Black" Margin="0,20"/>
+        </StackLayout>
+        <Button Text="Начать" TextColor="White" FontSize="20" FontAttributes="Bold" 
+                    BackgroundColor="#1B8DEB" CornerRadius="20" HeightRequest="60" Margin="20,10" 
+                    Clicked="StartTraining" />
+    </StackLayout>
+</ContentPage>

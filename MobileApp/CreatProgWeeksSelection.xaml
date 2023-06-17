@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.CreatProgWeeksSelection">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGray">
+            <Frame BackgroundColor="White" CornerRadius="20"  Margin="20,30,20,30">
+                <StackLayout>
+                    <Image Source="calendar" HorizontalOptions="Center" HeightRequest="75" Margin="0,20,0,0"/>
+                    <Label Text="Выберете недели, к которым вы" Margin="0,20,0,0"
+                   TextColor="Black" FontSize="19" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="примените составленный график" TextColor="Black" FontSize="19" FontAttributes="Bold" HorizontalOptions="Center"/>
+                    <Label Text="1 неделя" FontSize="20" TextColor="Black" FontAttributes="Bold"
+                   Margin="100,20,0,0"/>
+                    <CheckBox x:Name="week1"
+                      Margin="50,-34,0,0"/>
+                    <Label Text="2 неделя" FontSize="20" TextColor="Black" FontAttributes="Bold"
+                   Margin="100,20,0,0"/>
+                    <CheckBox x:Name="week2"
+                      Margin="50,-34,0,0"/>
+                    <Label Text="3 неделя" FontSize="20" TextColor="Black" FontAttributes="Bold"
+                   Margin="100,20,0,0"/>
+                    <CheckBox x:Name="week3"
+                      Margin="50,-34,0,0"/>
+                    <Label Text="4 неделя" FontSize="20" TextColor="Black" FontAttributes="Bold"
+                   Margin="100,20,0,0"/>
+                    <CheckBox x:Name="week4"
+                      Margin="50,-34,0,0"/>
+                    <Button Text="Продолжить" TextColor="#ffff" BackgroundColor="#1B8DEB" CornerRadius="20" HeightRequest="60" Margin="30,30,30,20"
+                     FontSize="15" FontAttributes="Bold" Clicked="Create2"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

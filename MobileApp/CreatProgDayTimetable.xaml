@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="MobileApp.CreatProgDayTimetable">
+    <StackLayout Orientation="Vertical">
+        <ScrollView>
+            <StackLayout BackgroundColor="#F5F5F5">
+                <Label Text="Выбор упражнений" TextColor="Black" FontSize="25" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <Frame BackgroundColor="White" Margin="2,5" CornerRadius="20">
+                    <StackLayout>
+                        <Label Text="Разминка" FontSize="17" FontAttributes="Italic" />
+                        <ImageButton Source="add" Aspect="AspectFill" Padding="0,5,0,5" Clicked="Create_VuborRazminka"
+                                 CornerRadius="20" BackgroundColor="#F5F5F5"/>
+                        <CollectionView x:Name="RazminkaCollection" HeightRequest="200">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Orientation="Vertical">
+                                        <Frame CornerRadius="30" BorderColor="Black" HasShadow="True" Margin="0, 0, 0, 10">
+                                            <StackLayout Orientation="Vertical">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <ffimageloading:SvgCachedImage Grid.Column="0" Source="{Binding GIF}" HeightRequest="40"/>
+                                                    <Label Grid.Column="1" Text="{Binding Name}" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                                                    <ImageButton CommandParameter="{Binding ID}" Source="close" HeightRequest="20" WidthRequest="20"  
+                                                    BackgroundColor="Transparent" Clicked="OnDeleteButton_Clicked" Grid.Column="2"/>
+                                                </Grid>
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <Label Text="Основная часть" FontSize="17" FontAttributes="Italic" />
+                        <ImageButton Source="add" Aspect="AspectFill" Padding="0,5,0,5" Clicked="Create_VuborOsnova"
+                                 CornerRadius="20" BackgroundColor="#F5F5F5"/>
+                        <CollectionView x:Name="OsnovaCollection" HeightRequest="200">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Orientation="Vertical">
+                                        <Frame CornerRadius="30" BorderColor="Black" HasShadow="True" Margin="0, 0, 0, 10">
+                                            <StackLayout Orientation="Vertical">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <ffimageloading:SvgCachedImage Grid.Column="0" Source="{Binding GIF}" HeightRequest="40"/>
+                                                    <Label Grid.Column="1" Text="{Binding Name}" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                                                    <ImageButton CommandParameter="{Binding ID}" Source="close" HeightRequest="20" WidthRequest="20"  
+                                                BackgroundColor="Transparent" Clicked="OnDeleteButton_Clicked" Grid.Column="2"/>
+                                                </Grid>
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <Label Text="Заминка" FontSize="17" FontAttributes="Italic"/>
+                        <ImageButton Source="add" Aspect="AspectFill" Padding="0,5,0,5" Clicked="Create_VuborZaminka"
+                                 CornerRadius="20" BackgroundColor="#F5F5F5"/>
+                        <CollectionView x:Name="ZaminkaCollection" HeightRequest="200">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Orientation="Vertical">
+                                        <Frame CornerRadius="30" BorderColor="Black" HasShadow="True" Margin="0, 0, 0, 10">
+                                            <StackLayout Orientation="Vertical">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <ffimageloading:SvgCachedImage Grid.Column="0" Source="{Binding GIF}" HeightRequest="40"/>
+                                                    <Label Grid.Column="1" Text="{Binding Name}" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                                                    <ImageButton CommandParameter="{Binding ID}" Source="close" HeightRequest="20" WidthRequest="20"  
+                                                BackgroundColor="Transparent" Clicked="OnDeleteButton_Clicked" Grid.Column="2"/>
+                                                </Grid>
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="trainertime" HeightRequest="25" HorizontalOptions="Start" Margin="10,20"/>
+            <Label Text="Общее время: " FontSize="13" TextColor="Black" Margin="0,20"/>
+            <Label x:Name="trainTimeInMin" FontSize="13" TextColor="Black" Margin="0,20"/>
+            <Label Text=" мин." FontSize="13" TextColor="Black" Margin="0,20"/>
+            <Label x:Name="trainTimeInSec" FontSize="13" TextColor="Black" Margin="0,20"/>
+            <Label Text=" сек." FontSize="13" TextColor="Black" Margin="0,20"/>
+        </StackLayout>
+        <Button Text="Продолжить" TextColor="#ffff" BackgroundColor="#1B8DEB" CornerRadius="20" HeightRequest="60" Margin="10,30,30,20"
+                     FontSize="15" FontAttributes="Bold" Clicked="ContinueOrEnd"/>
+    </StackLayout>
+</ContentPage>

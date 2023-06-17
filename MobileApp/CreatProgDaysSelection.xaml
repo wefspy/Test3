@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.CreatProgDaysSelection">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGray">
+            <Frame BackgroundColor="White" CornerRadius="20"  Margin="20,30,20,30">
+                <StackLayout>
+                    <Image Source="darts.png" HeightRequest="100" Margin="0,20,0,0" />
+                    <Label Text="Выбери дни для занятий" TextColor="Black" FontSize="25" FontAttributes="Bold" Margin="0,0,0,0" HorizontalOptions="Center"/>
+                    <Label Text="Понедельник" Margin="100,20,0,0" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                    <CheckBox x:Name="Monday"
+                        Margin="50,-34,0,0"  CheckedChanged="Create0_Monday"/>
+                    <Label Text="Вторник" Margin="100,10,0,0" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                    <CheckBox x:Name="Tuesday"
+                        Margin="50,-34,0,0"  CheckedChanged="Create0_Tuesday"/>
+                    <Label Text="Среда" Margin="100,10,0,0" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                    <CheckBox x:Name="Wednesday"
+                         Margin="50,-34,0,0"  CheckedChanged="Create0_Wednesday"/>
+                    <Label Text="Четверг" Margin="100,10,0,0" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                    <CheckBox x:Name="Thursday"
+                        Margin="50,-34,0,0"  CheckedChanged="Create0_Thursday"/>
+                    <Label Text="Пятница" Margin="100,10,0,0" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                    <CheckBox x:Name="Friday"
+                        Margin="50,-34,0,0"  CheckedChanged="Create0_Friday"/>
+                    <Label Text="Суббота" Margin="100,10,0,0" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                    <CheckBox x:Name="Saturday"
+                         Margin="50,-34,0,0"  CheckedChanged="Create0_Saturday"/>
+                    <Label Text="Воскресенье" Margin="100,10,0,0" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                    <CheckBox x:Name="Sunday" 
+                        Margin="50,-34,0,0"  CheckedChanged="Create0_Sunday"/>
+                    <Button Text="Продолжить" TextColor="#ffff" BackgroundColor="#1B8DEB" CornerRadius="20" HeightRequest="60" Margin="30,30,30,20"
+                        FontSize="15" FontAttributes="Bold" Clicked="Create1"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

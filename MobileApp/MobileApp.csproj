@@ -1,0 +1,146 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="basicExs.db" />
+    <None Remove="coolDownExs.db" />
+    <None Remove="warmUpExs.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="basicExs.db" />
+    <EmbeddedResource Include="coolDownExs.db" />
+    <EmbeddedResource Include="warmUpExs.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Rg.Plugins.Popup" Version="2.1.0" />
+    <PackageReference Include="SkiaSharp" Version="2.88.3" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.88.3" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="CompletionTraining.xaml.cs">
+      <DependentUpon>CompletionTraining.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="CreatProgDayTimetable.xaml.cs">
+      <DependentUpon>CreatProgDayTimetable.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="CreatProgWeeksSelection.xaml.cs">
+      <DependentUpon>CreatProgWeeksSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="CreatProgDaysSelection.xaml.cs">
+      <DependentUpon>CreatProgDaysSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ListCoolDowbExercises.xaml.cs">
+      <DependentUpon>ListCoolDowbExercises.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ListWarmUpExercises.xaml.cs">
+      <DependentUpon>ListWarmUpExercises.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ListBasicExercises.xaml.cs">
+      <DependentUpon>ListBasicExercises.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="CurProgSchedule.xaml.cs">
+      <DependentUpon>CurProgSchedule.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="CurProgDayTimetable.xaml.cs">
+      <DependentUpon>CurProgDayTimetable.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Training.xaml.cs">
+      <DependentUpon>Training.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ProgressBar.xaml.cs">
+      <DependentUpon>ProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="PopUpCardExercise.xaml.cs">
+      <DependentUpon>PopUpCardExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="PerformingTraining.xaml.cs">
+      <DependentUpon>PerformingTraining.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="PreparationTraining.xaml.cs">
+      <DependentUpon>PreparationTraining.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="AllAchivement.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CreatProgDaysSelection.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CreatProgWeeksSelection.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CreatProgDayTimetable.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ListBasicExercises.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ListWarmUpExercises.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ListCoolDowbExercises.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Cup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="League.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Training.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Profile.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CompletionTraining.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="PopUpCardExercise.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="PerformingTraining.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="PreparationTraining.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CurProgSchedule.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CurProgDayTimetable.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

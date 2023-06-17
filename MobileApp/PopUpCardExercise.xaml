@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="MobileApp.PopUpCardExercise">
+    <ScrollView>
+        <Frame BackgroundColor="White" CornerRadius="20"  >
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" >
+                <Label x:Name="Name" TextColor="Black" FontSize="24" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" />
+                <ffimageloading:SvgCachedImage x:Name="GIF"  HeightRequest="200"/>
+                <Label x:Name="Description" FontSize="20" TextColor="Black"  Margin="0,10,0,0"/>
+                <Entry x:Name="CountApproaches" Placeholder="кол-во подходов" />
+                <Entry x:Name="CountRepetitions" Placeholder="кол-во повторений"/>
+                <Entry x:Name="Time" Placeholder="время одного подхода"/>
+                <Label Text="(выполните несколько подходов и расчитайте среднее время в секундах)" FontAttributes="Italic"/>
+                <Button Text="Добавить" TextColor="White" FontSize="20" FontAttributes="Bold" 
+                    BackgroundColor="#1B8DEB" CornerRadius="20" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0"
+                    Clicked="AddExerciseButton"/>
+            </StackLayout>
+        </Frame>
+    </ScrollView>
+</popup:PopupPage>

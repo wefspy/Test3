@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="MobileApp.ProgressBar"            
+            xmlns:local="clr-namespace:MobileApp"
+            NavigationPage.HasNavigationBar="False"
+            BarBackground="white"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom">
+
+    <local:Page1 Title="Welcome!" IconImageSource="welcome"/>
+    <local:Page2 Title="Тренировки" IconImageSource="dumbbell"/>
+    <local:Page3 Title="Профиль" IconImageSource="settings"/>
+    <!--с 5 по 9 создан нижний бар с кнопками, с 11 по 13 вид кнопок(текст и картинка)-->
+
+</TabbedPage>

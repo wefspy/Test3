@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="MobileApp.PerformingTraining">
+    <StackLayout BackgroundColor="White">
+        <ffimageloading:SvgCachedImage x:Name="GifcurEx" HeightRequest="300"/>
+        <skia:SKCanvasView x:Name="Timer" PaintSurface="OnCanvasViewPaintSurface" HeightRequest="350" WidthRequest="400"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Пропустить"  TextColor="White" FontSize="20" FontAttributes="Bold" 
+                    BackgroundColor="#1B8DEB" CornerRadius="20" HeightRequest="60" Margin="20,10" 
+                    Clicked="Skip"/>
+            <Button Text="+20 сек" TextColor="White" FontSize="20" FontAttributes="Bold" 
+                    BackgroundColor="#1B8DEB" CornerRadius="20" HeightRequest="60" Margin="20,10"
+                    Clicked="Add20SecToTimer"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
